@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alarm Clock</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <meta http-equiv="content-type" content="text/html" charset="utf-8">
+    <script type="text/javascript" src="vue.js"></script>
+</head>
+
+<body>
+    <div class="app" id="app">        
+        
+        <p>Set Time:</p>
+        <div class="timer" id="timer" data-property="hide">            
+            <span class="time" id="hours"><div class="hours_up" id="hoursUp" v-on:click="setTimeUp($event)"></div>{{ showHours }}<div class="hours_down" id="hoursDown" v-on:click="setTimeDown($event)"></div></span>                            
+            <span class="dots" id="dots">:</span>            
+            
+            <span class="time" id="minutes"><div class="minutes_up" id="minutesUp" v-on:click="setTimeUp($event)"></div>{{ showMinutes }}<div class="minutes_down" id="minutesDown" v-on:click="setTimeDown($event)"></div></span>            
+            <span class="dots" id="dots">:</span>            
+            
+            <span class="time" id="seconds"><div class="seconds_up" id="secondsUp" v-on:click="setTimeUp($event)"></div>{{ showSeconds }}<div class="seconds_down" id="secondsDown" v-on:click="setTimeDown($event)"></div></span>                        
+        </div>
+
+        <p>Select track:</p>
+        <div class="tracks" id="tracks">            
+            <img v-bind:src="track.trackPictureSrc">            
+        </div>
+        <p>{{ track.trackName }}</p>
+        
+        <span class="left_arrow" v-on:click="getPreviousTrack" id="leftArrow" data-property="hide"></span>
+        <span class="right_arrow" v-on:click="getNextTrack" id="rightArrow" data-property="hide"></span>
+        
+        <button v-on:click="setAlarm" id="button" data-property="hide">OK</button>
+        
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

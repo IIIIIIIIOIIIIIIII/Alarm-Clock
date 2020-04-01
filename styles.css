@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: linear-gradient(180deg, #73027b, #4fbad1);
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;    
+    font-size: 24px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100%;
+}
+
+.app {  
+    margin-top: 50px;  
+    width: 600px;
+    height: 700px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;    
+    background-color: #e5e1e1;
+    border-radius: 10px;
+    position: relative;    
+}
+
+.timer {
+    margin-top: 50px;
+}
+
+.time {
+    border: 1px solid black;
+    padding: 10px;
+    position: relative;
+}
+
+
+.time div {
+    position: absolute;
+}
+
+.time div:hover {
+    cursor: pointer;    
+}
+
+.hours_up, .minutes_up, .seconds_up {
+    border-bottom: 10px solid #73027b;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    display: inline-block;
+    bottom: 55px;
+    left: 13px;
+}
+
+.hours_up:hover, .minutes_up:hover, .seconds_up:hover {
+    border-bottom: 10px solid black;    
+}
+
+.hours_down, .minutes_down, .seconds_down {
+    border-top: 10px solid #73027b;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    display: inline-block;
+    top: 55px;
+    right: 13px;
+}
+
+.hours_down:hover, .minutes_down:hover, .seconds_down:hover {
+    border-top: 10px solid black;
+}
+
+.tracks {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    overflow: hidden;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid #73027b;
+}
+
+.tracks + p {
+    font-size: 22px;
+}
+
+p {
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+button {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background-color: purple;
+    color: white;
+    border: 1px solid transparent;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 35px;
+    
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #e5e1e1;
+    color: purple;
+    border: 2px solid purple;    
+}
+
+.left_arrow, .right_arrow {
+    display: inline-block;    
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 330px;
+}
+
+.left_arrow:hover, .right_arrow:hover {
+    cursor: pointer;   
+}
+
+.left_arrow {
+    border-right: 20px solid #73027b;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    left: 110px;     
+}
+
+.left_arrow:hover {
+    border-right: 20px solid black;
+}
+
+.right_arrow {
+    border-left: 20px solid #73027b;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    right: 110px;     
+}
+
+.right_arrow:hover {
+    border-left: 20px solid black;
+}
